@@ -61,8 +61,7 @@ local function updateISToolTipInv(tooltip, item)
 	
 	
 	-- Equippable items
-	
-	if not item:IsClothing() and (item:getCategory() ~= "Food" or item:getScriptItem():isCantEat()) then
+	if item:IsWeapon() then
 	
 		-- Check items in hands.
 		if equippedItems["_Hands"] ~= nil then
