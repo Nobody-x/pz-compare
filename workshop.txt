@@ -7,6 +7,8 @@ description=A mod to compare an item in inventory/container with equipped ones.
 description=
 description=How to: Hold LSHIFT (by default) while hovering an item to see the equipped ones (if any).
 description=
+description=This mod is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2169435993]ModOptions[/url] to change the key bind.
+description=
 description=[h1] Todo list [/h1]
 description=
 description=[list]
@@ -19,5 +21,8 @@ description=
 description=Source Code: [url=https://github.com/Nobody-x/pz-compare]Gitub[/url]
 description=Have a bug ? [url=https://github.com/Nobody-x/pz-compare/issues]Open an issue[/url]
 description=
+description=
+description=Workshop ID: 2961069019
+description=Mod ID: nxcompare
 tags=Build 41;Interface;Items;Multiplayer
 visibility=public
