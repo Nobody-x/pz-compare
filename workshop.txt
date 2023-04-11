@@ -1,0 +1,8 @@
+version=1
+id=2961069019
+title=Nx's Compare
+description=A mod to compare an item in inventory/container with equipped ones.
+description=
+description=Press left shit (by default) while hovering an item to see the equipped ones (if any).
+tags=Build 41;Interface;Items;Multiplayer
+visibility=public
