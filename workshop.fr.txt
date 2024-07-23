@@ -1,0 +1,23 @@
+[h1] Description [/h1]
+
+Ce mod permet de comparer un item dans l'inventaire/dans un conteneur avec son équivalent équipé.
+
+Pour l'utiliser: maintenir enfoncé LSHIFT en survolant un item, son équivalent s'affichera à coté (si il y en a un d'équipé).
+
+Ce mod est compatible avec [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2169435993]ModOptions[/url] pour changer la touche de raccourci.
+Ce mod devrait être compatible avec les autres mods rajoutant des tenues/armes.
+
+[h1] Todo list [/h1]
+
+[list]
+    [*] Amélioration des performances.
+    [*] [strike]Comparer les stats de l'item avec ceux de l'item équipé.[/strike] - Probablement impossible pour le moment
+[/list]
+
+[h1] Support [/h1]
+
+Code source : [url=https://github.com/Nobody-x/pz-compare]Gitub[/url]
+Un bug ? [url=https://github.com/Nobody-x/pz-compare/issues]Ouvrez une issue[/url]
+
+Workshop ID: 2961069019
+Mod ID: nxcompare

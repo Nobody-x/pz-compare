@@ -1,4 +1,8 @@
+require "NPCs/BodyLocations"
+
 NxCompare_Utils = {}
+
+local bodyLocationGroup = BodyLocations.getGroup("Human");
 
 
 -- Compute all equipped items indexed by their body part, hand location or attached slot.
@@ -20,7 +24,6 @@ NxCompare_Utils.getEquippedItems = function()
 				equippedItems["_Hands"].RightHand = primaryItem
 			end
 		end
-		
 		
 		if secondaryItem and primaryItem ~= secondaryItem then 
 			if secondaryItem:IsWeapon() then
@@ -78,6 +81,10 @@ NxCompare_Utils.getSlotDefsByAttachmentType = function(attachmentType)
 	end
 	
 	return slots
+end
+
+NxCompare_Utils.getItemBodyLoc = function(item)
+	return bodyLocationGroup:getLocation(item:getBodyLocation())
 end
 
 

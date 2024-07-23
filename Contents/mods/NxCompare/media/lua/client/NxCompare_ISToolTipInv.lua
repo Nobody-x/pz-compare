@@ -59,19 +59,15 @@ local function updateISToolTipInv(tooltip, item)
 	local equippedItems = NxCompare_Utils.getEquippedItems()
 	local compareTo = {}
 	
-	
 	-- Equippable items
 	if item:IsWeapon() then
-	
 		-- Check items in hands.
 		if equippedItems["_Hands"] ~= nil then
 			for i, handItem in pairs(equippedItems["_Hands"]) do
 				table.insert(compareTo, handItem)
 			end
 		end
-		
 	end
-	
 	
 	local slotDefinitions = NxCompare_Utils.getSlotDefsByAttachmentType(item:getAttachmentType())
 	
@@ -87,10 +83,19 @@ local function updateISToolTipInv(tooltip, item)
 		end
 	end
 	
+	-- Special handling for clothes
 	if item:IsClothing() then
-		local _bodyLoc = item:getBodyLocation()
+		local itemBodyLoc = item:getBodyLocation()
 		
-		if equippedItems[_bodyLoc] ~= nil then table.insert(compareTo, equippedItems[_bodyLoc]) end
+		for location, equippedItem in pairs(equippedItems) do
+			-- We must loop over all equipped clothing to find exclusive items.
+			if not location:find("^_") and equippedItem:IsClothing() then
+				local _itemBodyLoc = NxCompare_Utils.getItemBodyLoc(equippedItem)
+				if _itemBodyLoc:getId() == itemBodyLoc or _itemBodyLoc:isExclusive(itemBodyLoc) then
+					table.insert(compareTo, equippedItem)
+				end
+			end
+		end
 	end
 	
 	if item:getCategory() == "Container" and item:canBeEquipped() ~= "" then
@@ -103,7 +108,7 @@ local function updateISToolTipInv(tooltip, item)
 			if equippedItems[_bodyLoc] ~= nil then table.insert(compareTo, equippedItems[_bodyLoc]) end
 		end
 	end
-		
+	
 	if NxCompare_Utils.in_array(item, compareTo) then
 		-- Tooltip is about an equipped item.
 		return
