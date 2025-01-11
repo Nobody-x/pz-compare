@@ -1,7 +1,8 @@
 version=1
 id=2961069019
-title=Nx's Compare items
+title=[B42/41] Nx's Compare items
 description=[h1] Description [/h1]
+description=[h2] Now updated to build 42 ![/h2]
 description=
 description=A mod to compare an item in inventory/container with equipped ones.
 description=

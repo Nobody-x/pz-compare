@@ -1,4 +1,5 @@
 [h1] Description [/h1]
+[h2] Maintenant à jour pour le build 42 ![/h2]
 
 Ce mod permet de comparer un item dans l'inventaire/dans un conteneur avec son équivalent équipé.
 
@@ -17,7 +18,7 @@ Ce mod devrait être compatible avec les autres mods rajoutant des tenues/armes.
 [h1] Support [/h1]
 
 Code source : [url=https://github.com/Nobody-x/pz-compare]Gitub[/url]
-Un bug ? [url=https://github.com/Nobody-x/pz-compare/issues]Ouvrez une issue[/url]
+Un bug ? [url=https://github.com/Nobody-x/pz-compare/issues]Ouvrez un ticket[/url]
 
 Workshop ID: 2961069019
 Mod ID: nxcompare
