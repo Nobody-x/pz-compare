@@ -27,11 +27,11 @@ Vanilla_ISToolTipInv.new = ISToolTipInv.new
 Vanilla_ISToolTipInv.setItem = ISToolTipInv.setItem
 
 -- constants
-local validClasses = { 
-	"zombie.inventory.types.HandWeapon", 
-	"zombie.inventory.types.Clothing", 
-	"zombie.inventory.types.InventoryContainer", 
-	"zombie.inventory.types.AlarmClockClothing" 
+local validCategories = { 
+	"Weapon", 
+	"Clothing", 
+	"Container", 
+	"AlarmClock"
 }
 
 function ISToolTipInv:prerender()
@@ -56,7 +56,12 @@ local function updateISToolTipInv(tooltip, item)
 	
 	-- Check if the item is from a valid category to compare.
 	-- Clothing, Container or Weapon.
-	if not NxCompare_Utils.in_array(item:getClass():getName(), validClasses) then
+	if not NxCompare_Utils.in_array(item:getCategory(), validCategories) then
+		return
+	end
+	
+	-- Special check for alarm clock since we can't distringuish them from wrist watches
+	if item:getCategory() == "AlarmClock" and not item:IsClothing() then
 		return
 	end
 	
