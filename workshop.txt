@@ -26,5 +26,5 @@ description=
 description=
 description=Workshop ID: 2961069019
 description=Mod ID: nxcompare
-tags=Build 41;Interface;Items;Multiplayer
+tags=Build 41;Build 42;Interface;Items;Multiplayer
 visibility=public
