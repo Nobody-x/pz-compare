@@ -43,11 +43,11 @@ NxCompare_Utils.getEquippedItems = function()
 			if item ~= primaryItem and item ~= secondaryItem then
 				-- Add equipped clothes and backpacks.
 				if item:IsClothing() and item:isEquipped() then
-					equippedItems[item:getBodyLocation()] = item
+					equippedItems[item:getBodyLocation():toString()] = item
 				end
 				
 				if item:getCategory() == "Container" and playerObj:isEquipped(item) and item:canBeEquipped() ~= "" then
-					equippedItems[item:canBeEquipped()] = item
+					equippedItems[item:canBeEquipped():toString()] = item
 				end
 			end
 		end

@@ -98,17 +98,17 @@ local function updateISToolTipInv(tooltip, item)
 		local itemBodyLoc = item:getBodyLocation()
 		
 		-- Special handling for watches
-		if NxCompare_Utils.in_array(itemBodyLoc, {"LeftWrist", "RightWrist"}) then
+		if NxCompare_Utils.in_array(itemBodyLoc:toString(), {"LeftWrist", "RightWrist"}) then
 			if equippedItems["LeftWrist"] ~= nil then table.insert(compareTo, equippedItems["LeftWrist"]) end
 			if equippedItems["RightWrist"] ~= nil then table.insert(compareTo, equippedItems["RightWrist"]) end
 		-- Special handling for rings
-		elseif NxCompare_Utils.in_array(itemBodyLoc, {"Left_MiddleFinger", "Left_RingFinger", "Right_MiddleFinger", "Right_RingFinger"}) then
+		elseif NxCompare_Utils.in_array(itemBodyLoc:toString(), {"Left_MiddleFinger", "Left_RingFinger", "Right_MiddleFinger", "Right_RingFinger"}) then
 			if equippedItems["Left_MiddleFinger"] ~= nil then table.insert(compareTo, equippedItems["Left_MiddleFinger"]) end
 			if equippedItems["Left_RingFinger"] ~= nil then table.insert(compareTo, equippedItems["Left_RingFinger"]) end
 			if equippedItems["Right_MiddleFinger"] ~= nil then table.insert(compareTo, equippedItems["Right_MiddleFinger"]) end
 			if equippedItems["Right_RingFinger"] ~= nil then table.insert(compareTo, equippedItems["Right_RingFinger"]) end
 		-- Special handling for knee protection
-		elseif NxCompare_Utils.in_array(itemBodyLoc, {"Knee_Left", "Knee_Right"}) then
+		elseif NxCompare_Utils.in_array(itemBodyLoc:toString(), {"Knee_Left", "Knee_Right"}) then
 			if equippedItems["Knee_Left"] ~= nil then table.insert(compareTo, equippedItems["Knee_Left"]) end
 			if equippedItems["Knee_Right"] ~= nil then table.insert(compareTo, equippedItems["Knee_Right"]) end
 		end
